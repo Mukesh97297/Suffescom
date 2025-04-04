@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exact Footer Design</title>
+    <!-- Bootstrap 5 CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        /*Our Family Section styles*/
+        .our-family {
+            background-color: #070A441F;
+            max-width: 360px;
+            width: 100%;
+            height: 60px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .our-family span {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 100%;
+            letter-spacing: 17%;
+            text-transform: uppercase;
+        }
+
+        .three-gentrations h4 {
+            font-family: Baskerville Old Face;
+            font-weight: 400;
+            font-size: 46px;
+            line-height: 55px;
+            letter-spacing: 0%;
+        }
+
+        .three-gentrations p {
+            color: #000000;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 32px;
+            letter-spacing: 0%;
+
+        }
+
+        /*Request Section*/
+        .request-section {
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #070A44;
+        }
+
+        .email-input-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid #070A44;
+            padding: 8px 12px;
+
+        }
+
+        .email-input {
+            flex: 1;
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 16px;
+            color: #070A44;
+        }
+
+        .send-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .send-button img {
+            width: 20px;
+            height: 20px;
+        }
+
+
+        /* Footer Styles */
+        .footer {
+            background-color: #070A44;
+            color: #FFFFFF;
+        }
+
+        .social-icon a {
+            width: 24px;
+            height: 24px;
+            background-color: #FFFFFF;
+            padding: 8px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .quick-links-title {
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .quick-links-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .quick-links-list li {
+            margin-bottom: 5px;
+        }
+
+        .quick-links-list a {
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            color: #FFFFFF;
+
+        }
+
+        .contact-title {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .contact-text {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            color: #FFFFFF;
+            margin-bottom: 8px;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .contact-text a {
+            width: 24px;
+            height: 24px;
+            background-color: #FFFFFF;
+            padding: 8px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: #001c58;
+            /* Dark Blue Background */
+            padding: 10px 20px;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+            /* Adjust logo size */
+        }
+
+        .nav-link {
+            color: #FFFFFF !important;
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-transform: capitalize;
+
+        }
+
+        .nav-link:hover {
+            text-decoration: underline;
+            animation-duration: 0ms;
+        }
+
+        .request-btn {
+            background-color: #F4F9FF;
+            color: #070A44;
+            padding: 15px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-transform: uppercase;
+            border-radius: 0;
+            text-decoration: none
+        }
+
+        /* Mobile View Adjustments */
+        @media (max-width: 992px) {
+            .navbar-nav {
+                text-align: center;
+            }
+
+            .request-btn {
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: url('images/backgraund.png') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .hero-title {
+            background: #E2E7F2CC;
+            padding: 5px;
+            height: auto;
+            min-height: 120px;
+        }
+
+        .hero-title h4 {
+            color: #070A44;
+            font-weight: 400;
+            font-size: 50px;
+            letter-spacing: 0%;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .hero-title h6 {
+            font-weight: 400;
+            font-size: 45px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            color: #070A44;
+
+        }
+
+
+        .hero-text {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 29px;
+            letter-spacing: 0%;
+            text-align: center;
+            color: #FFFFFF;
+
+        }
+
+        .badge {
+            background: url('images/hero-round-circle.png') no-repeat center center/cover;
+            width: 150px;
+            height: 150px;
+            position: relative;
+        }
+
+        .badge-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .asset-text {
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .badge-text h4 {
+            font-family: "Bodoni Moda SC", serif;
+            font-weight: 400;
+            font-size: 80px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            text-transform: uppercase;
+
+        }
+
+        .badge-text p {
+
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+
+        }
+
+        .circular-text-container {
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 200px;
+            height: 200px;
+            pointer-events: none;
+        }
+
+        .circular-text-container svg {
+            transform: rotate(-90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Katz Family Financial">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">What We Do</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Who We Serve</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">What We Value</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Our Firm</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Letters</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <a href="#" class="request-btn"><span>REQUEST AN INTRODUCTION</span></a>
+        </div>
+    </nav>
+    <!-- Hero section -->
+    <div>
+        <div class="hero">
+            <div class="overlay"></div>
+            <div class="hero-content">
+                <div class="hero-title">
+                    <h4>A MULTI-GENERATIONAL</h4>
+                    <h6>Wealth Management Firm</h6>
+                </div>
+                <p class="hero-text mt-2">Supporting individuals and families in building a secure financial future with
+                    personalized, proven strategies and a legacy of trusted guidance.</p>
+                <div class="badge">
+
+                    <div class="badge-text">
+                        <h4>55</h4>
+                        <p>YEARS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Section -->
+        <div style="background-color: #F8F8F8;">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="d-flex flex-column gap-3">
+                            <div class="our-family">
+                                <h4>Our Family Firm</span>
+                            </div>
+                            <div class="three-gentrations">
+                                <h4>Three Generations of Financial Expertise Building Generational Wealth</h4>
+                                <div>
+                                    <p>Our family firm advises other families and individuals with a warm and
+                                        personalized
+                                        approach.
+                                        We invest client’s assets using our proprietary research model while also being
+                                        their
+                                        go-to
+                                        expert on financial matters. </p>
+                                    <p> With 55 years of research and asset management experience, our commitment to our
+                                        clients is
+                                        based in the active management of portfolios with a highly personalized approach
+                                        dependent
+                                        on the clients goals and needs. </p>
+                                    <p>Whether you're just starting out or planning
+                                        ahead, it's always the right time to focus on your financial future. Learn more
+                                        about what
+                                        we offer or start a conversation with an advisor today.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex justify-content-center align-content-center" style="height: 100%;">
+                            <img src="images/our-family.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Request Section -->
+        <div style="background-color: #F4F9FF;">
+            <div class="container">
+                <div class="row">
+                    <div class="py-5 text-center d-flex flex-column justify-content-center align-items-center gap-2">
+                        <h4 class="request-section">Request an Introduction</h4>
+                        <div class="email-input-container">
+                            <input type="email" placeholder="Your Email" class="email-input">
+                            <button type="submit" class="send-button">
+                                <img src="images/messanger-icon.png" alt="Send">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Section -->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row">
+                    <!-- Company Info -->
+                    <div class="col-md-3 ">
+                        <div class="d-flex flex-column gap-3">
+                            <div>
+                                <img src="images/logo.png" style="width: 196px; height: 69px;" alt="">
+                            </div>
+                            <p>We show you how to protect your assets and secure your family's financial future.</p>
+                            <div class="d-flex gap-3 social-icon">
+                                <a href="#"><img src="images/facebook-icon.png" class="img-fluid"
+                                        alt="facebook-icon"></a>
+                                <a href="#"><img src="images/instagram-icon.png" class="img-fluid"
+                                        alt="instagram-icon"></a>
+                                <a href="#"><img src="images/youtube-icon.png" class="img-fluid" alt="youtube-icon"></a>
+                                <a href="#"><img src="images/tiktok-icon.png" class="img-fluid" alt="tiktok-icon"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="col-md-6  ">
+                        <div class="d-grid justify-content-center align-content-center">
+                            <h5 class="quick-links-title">Quick Links</h5>
+                            <ul class="quick-links-list">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">What We Do</a></li>
+                                <li><a href="#">Who We Serve</a></li>
+                                <li><a href="#">What We Value</a></li>
+                                <li><a href="#">Our Firm</a></li>
+                                <li><a href="#">Letters</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Contact Us -->
+                    <div class="col-md-3 ">
+                        <div>
+                            <h5 class="contact-title">Contact Us</h5>
+                            <p class="contact-text ">
+                                <a href="#"><img src="images/location-icon.png" class="contact-icon img-fluid"
+                                        alt="Location Icon"></a>
+                                3307 Duke Street <br>Alexandria, VA 22314
+                            </p>
+
+                            <p class="contact-text">
+                                <a href="#"><img src="images/mail-com.png" class="contact-icon img-fluid"
+                                        alt="Email Icon"></a>
+
+                                info@katzfamilyfinancial.com
+                            </p>
+
+                            <p class="contact-text">
+                                <a href="#"><img src="images/call-icon.png" class="contact-icon img-fluid"
+                                        alt="Phone Icon"></a>
+                                (800) 961-8085 <br>
+                                (703) 823-1921
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom -->
+            <div style="border-top: 1px solid #D6D6D6;">
+                <div class="container">
+                    <div class="fw-semibold text-center pt-4" style="color: #FFFFFF;">
+                        <p>
+                            Copyright 2021 - Katz Family Financial Advisors, LLC can do business in all 50 states,
+                            provided
+                            it
+                            is
+                            properly registered, excluded or exempted from registration. The firm is a registered
+                            investment
+                            adviser
+                            in
+                            the States of Washington, Maryland, California, New York, Virginia and Washington DC. The
+                            adviser
+                            may
+                            not
+                            transact business in states where it is not appropriately registered, excluded or exempted
+                            from
+                            registration. Individualized responses to persons that involve either the effecting of
+                            transaction
+                            in
+                            securities, or the rendering of personalized investment advice for compensation, will not be
+                            made
+                            without
+                            registration or exemption. 
+                        </p>
+                        <p>
+                            Copyright 2021 - Katz Family Financial Advisors
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
